@@ -1,13 +1,3 @@
-// Javascript Toggle & Smooth Scroll
-const btn = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-    btn.classList.toggle('hidden', window.scrollY < 300);
-});
-btn.addEventListener('click', () =>
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-);
-
-
 // Mobile menu toggling
 const menuBtn = document.getElementById("mobile-menu-btn");
 const closeBtn = document.getElementById("mobile-menu-close");

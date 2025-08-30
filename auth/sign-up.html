@@ -49,7 +49,7 @@
                 class="relative z-10 w-full max-w-md space-y-4 bg-white/80 p-6 md:p-6 rounded-lg md:rounded-lg shadow-lg">
 
                 <!-- Form Section -->
-                <form id="signupForm" class="space-y-4 bg-white/80 p-6 mx-auto max-w-md rounded-lg">
+                <form id="signupForm" class="space-y-4 p-6 mx-auto max-w-md rounded-lg">
 
                     <div class="flex flex-col items-center space-y-2">
                         <!-- profile SVG -->
@@ -57,7 +57,7 @@
                             version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             xml:space="preserve" xmlns:serif="http://www.serif.com/"
                             style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
-                            stroke="#4f46e5" stroke-width="0.00064">
+                            stroke="#140342" stroke-width="0.00064">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
                                 stroke="#CCCCCC" stroke-width="1.6640000000000001"></g>
@@ -136,7 +136,7 @@
                         </svg>
 
                         <!-- new headings -->
-                        <h2 class="text-lg font-semibold text-black font-[marcellus]">
+                        <h2 class="text-lg font-semibold text-[#140342] font-[marcellus]">
                             Create your account
                         </h2>
                         <p class="text-sm text-gray-600 font-[Figtree]">
@@ -173,6 +173,17 @@
             </div>
         </div>
     </div>
+
+    <!-- Sucess Popup -->
+    <div id="signupSuccess"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4 mx-5">
+        <div role="alert" aria-live="assertive"
+            class="bg-blue-500 text-[#140342] px-6 py-4 rounded-lg shadow-lg max-w-xs w-auto ">
+            <p class="mx-10 text-white text-center font-[marcellus] text-lg">Signup successful!</p>
+
+        </div>
+    </div>
+
     <script src="../auth/auth.js/sign-up.js"></script>
     <script src="../js/carousel.js"></script>
 </body>

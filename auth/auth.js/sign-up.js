@@ -1,31 +1,52 @@
-// Sign Up
-document.getElementById('signupForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('signupForm');
+    const popup = document.getElementById('signupSuccess');
 
-    if (!email || !password) {
-        alert('Please fill in the details');
-        return;
-    }
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-    try {
-        const res = await fetch('https://reqres.in/api/register', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'x-api-key': 'reqres-free-v1' },
-            body: JSON.stringify({ email, password })
-        });
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
 
-        const data = await res.json();
-
-        if (res.ok && data.token) {
-            localStorage.setItem('token', data.token);
-            window.location.href = '../dashboard/home.html';
-        } else {
-            alert('Signup failed: ' + (data.error || 'Unknown error'));
+        if (!email || !password) {
+            alert('Please fill in all details');
+            return;
         }
-    } catch (err) {
-        console.error(err);
-        alert('Network error, try again.');
-    }
+
+        try {
+            const res = await fetch('https://reqres.in/api/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-api-key': 'reqres-free-v1'
+                },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await res.json();
+
+            if (res.ok && data.token) {
+                localStorage.setItem('token', data.token);
+
+                // show overlay
+                popup.classList.remove('hidden');
+                popup.classList.add('flex');
+
+                // give the browser a paint cycle
+                await new Promise(r => requestAnimationFrame(r));
+
+                // redirect after 2 seconds
+                setTimeout(() => {
+                    window.location.href = '../dashboard-pages/dashboard.html';
+                }, 2000);
+
+            } else {
+                alert('Signup failed: ' + (data.error || 'Unknown error'));
+            }
+
+        } catch (err) {
+            console.error(err);
+            alert('Network error, try again.');
+        }
+    });
 });
