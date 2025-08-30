@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <script>
+        // enable class-based dark mode
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 min-h-screen flex relative">
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-gray-800 transform -translate-x-full transition-transform duration-300 z-30 flex flex-col">
+        <!-- Header & Close -->
+        <div class="flex items-center justify-between px-4 py-4 border-b border-gray-200 dark:border-gray-700">
+            <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">MENU</h2>
+            <button id="closeSidebar" class="text-gray-700 dark:text-gray-200 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700">
+            <span class="text-gray-700 dark:text-gray-300">Dark Mode</span>
+            <button id="toggleDarkMode" class="focus:outline-none text-gray-700 dark:text-gray-200">
+                <svg id="themeIcon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 2a.75.75 0 01.75.75V4a.75.75 0 01-1.5 0V2.75A.75.75 0 0110 2zM14.657 5.343a.75.75 0 011.06 1.06l-.884.884a.75.75 0 11-1.06-1.06l.884-.884zM18 10a.75.75 0 01.75.75H20a.75.75 0 010 1.5h-1.25A.75.75 0 0118 10zM14.657 16.657a.75.75 0 011.06-1.06l.884.884a.75.75 0 11-1.06 1.06l-.884-.884zM10 16a.75.75 0 01.75.75V18a.75.75 0 01-1.5 0v-1.25A.75.75 0 0110 16zM5.343 14.657a.75.75 0 01-1.06 1.06l-.884-.884a.75.75 0 111.06-1.06l.884.884zM2 10a.75.75 0 01.75-.75H4a.75.75 0 010 1.5H2.75A.75.75 0 012 10zM5.343 5.343a.75.75 0 011.06-1.06l.884.884a.75.75 0 01-1.06 1.06l-.884-.884z" />
+                    <circle cx="10" cy="10" r="3.5" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 px-4 py-6 overflow-auto">
+            <ul class="space-y-2">
+                <li>
+                    <a href="dashboard.html"
+                        class="flex items-center px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200">
+                        <!-- Home Icon -->
+                        <svg class="w-5 h-5 mr-3 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 9l9-7 9 7v11a2 2 0 01-2 2h-4a2 2 0 01-2-2V12H9v8a2 2 0 01-2 2H3a2 2 0 01-2-2V9z" />
+                        </svg>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html"
+                        class="flex items-center px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200">
+                        <!-- Academic Cap Icon -->
+                        <svg class="w-5 h-5 mr-3 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 14l9-5-9-5-9 5 9 5z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 14l6.16-3.422a12.083 12.083 0 01.84 3.433C19 15.597 16.403 18 12 18s-7-2.403-7-4.989c0-1.223.331-2.38.908-3.38L12 14z" />
+                        </svg>
+                        Courses
+                    </a>
+                </li>
+                <li>
+                    <a href="assignment.html"
+                        class="flex items-center px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200">
+                        <!-- Clipboard List Icon -->
+                        <svg class="w-5 h-5 mr-3 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 3h6a2 2 0 012 2v0a2 2 0 01-2 2H9a2 2 0 01-2-2v0a2 2 0 012-2z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l2 2 4-4" />
+                        </svg>
+                        Assignments
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html"
+                        class="flex items-center px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200">
+                        <!-- User Icon -->
+                        <svg class="w-5 h-5 mr-3 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5.121 17.804A13.937 13.937 0 0112 15c2.5 0 4.847.699 6.879 1.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        Profile
+                    </a>
+                </li>
+                <li class="mt-6">
+                    <button id="logout"
+                        class="flex items-center w-full px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded">
+                        <!-- Logout Icon -->
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 11-4 0v-1m0-8V7a2 2 0 114 0v1" />
+                        </svg>
+                        Logout
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Overlay (transparent on lg) -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 lg:bg-opacity-0 hidden z-20"></div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="flex-1 flex flex-col transition-all duration-300">
+        <!-- Topbar -->
+        <header class="flex items-center justify-between px-4 py-4 bg-white dark:bg-gray-800 shadow">
+            <div class="flex items-center space-x-4">
+                <!-- Menu Toggle -->
+                <button id="openSidebar" class="text-gray-700 dark:text-gray-200 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <!-- Logo -->
+                <div class="text-sm font-bold text-gray-800 dark:text-gray-200">
+                    <img src="../assets/images/logo.png" alt="logo-image" class="h-12 w-32">
+                </div>
+            </div>
+
+            <!-- Search / Filter -->
+            <!-- Search / Filter -->
+            <div class="flex-1 mx-4 hidden md:block">
+                <div class="relative">
+                    <input type="text" placeholder="Search..."
+                        class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none" />
+                    <button
+                        class="absolute right-1 top-1 bottom-1 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded">
+                        Search
+                    </button>
+                </div>
+            </div>
+
+            <!-- Icons -->
+            <div class="flex items-center space-x-4">
+                <button
+                    class="relative text-gray-700 dark:text-gray-200 focus:outline-none border-2 hover:border-4 border-gray-800">
+                    <!-- Bell -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                    <span class="absolute top-0 right-0 block w-2 h-2 bg-red-500
+                    rounded-full"></span>
+                </button>
+
+                <button
+                    class="relative text-gray-700 dark:text-gray-200 focus:outline-none border-2 border-white rounded-full hover:border-4">
+                    <!-- Profile with notification dot -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5.121 17.804A13.937 13.937 0 0112 15c2.5 0 4.847.699 6.879 1.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <!-- <span class="absolute top-0 right-0 block w-2 h-2 bg-red-500 rounded-full"></span> -->
+                </button>
+            </div>
+        </header>
+
+        <!-- Cards Grid -->
+        <main class="p-6 overflow-auto">
+            <div class="bg-white dark:bg-gray-800 p-4 mb-4 mt-0 rounded-md">
+                <div class="max-w-5xl my-0">
+                    <h2
+                        class="text-lg sm:text-lg md:text-xl lg:text-xl font-[hankengrotesk] font-bold text-gray-900 dark:text-indigo-300">
+                        Assignments: Track Your Tasks and Meet Deadlines In Time
+                    </h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="assignmentsList">
+                <!-- Repeatable Card -->
+                <!-- <div class="bg-white dark:bg-gray-800 rounded shadow overflow-hidden"> -->
+
+            </div>
+    </div>
+    </main>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>

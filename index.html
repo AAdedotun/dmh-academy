@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- OPEN GRAPH TAGS -->
+
+    <meta property="og:type" content="DMH">
+    <meta property="og:title" content="DMH - Academy">
+    <meta property="og:url" content="https://aadedotun.github.io/dmh-academy-project/index.html">
+    <meta property="og:image" content="./assets/images/og-img.png">
+    <meta property="og:description" content="Hands-on tech training and expert mentorship 
+    to launch your career in any Tech Course. Join DMH - Academy today!">
+
+    <!-- Favicon Tags -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+
+    <title>DMH - Academy</title>
+
+    <!-- Link to your compiled Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased font-sans">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full bg-[#140342] z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+
+                <!-- Left: Logo + Explore -->
+                <div class="relative flex items-center">
+                    <a href="#" class="flex-shrink-0">
+                        <img src="./assets/images/logo.png" alt="Logo" class="h-8 w-auto" />
+                    </a>
+                    <div class="flex flex-row">
+                        <button id="explore-btn"
+                            class=" text-[#00FF84] font-semibold focus:outline-none relative ml-10 hidden lg:block">
+                            Explore
+
+
+                        </button>
+                        <span class="ml-2 pt-3 animate-bounce hidden lg:block">
+                            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                stroke="#00FF42">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path d="M6 9L12 15L18 9" stroke="#00FF42" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+
+
+                    <!-- Explore Dropdown -->
+                    <div id="explore-dropdown"
+                        class="absolute top-full left-0 mt-2 w-40 bg-[#140342] rounded-lg text-white shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 hover:bg-white hover:text-[#140342]">Design</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-white hover:text-[#140342]">Development</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-white hover:text-[#140342]">Sales Marketing
+                            <a href="#" class="block px-4 py-2 hover:bg-white hover:text-[#140342]">Marketing</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-white hover:text-[#140342]">IT & Software</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-white hover:text-[#140342]">Photography</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-white hover:text-[#140342]">Personal</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-white hover:text-[#140342]">Lifestyle</a>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-white hover:text-[#140342] hover:rounded-b-lg">SEO</a>
+
+                    </div>
+                </div>
+
+                <!-- Center: Links (desktop only) -->
+                <div class="hidden md:flex space-x-8 text-white font-[hankengrotesk] lg:text-lg text-sm">
+                    <a href="#" class="hover:text-gray- text-white hover:text-[#00ff42]">Home</a>
+                    <a href="#" class="hover:text-gray- text-white hover:text-[#00ff42]">Features</a>
+                    <a href="#" class="hover:text-gray- text-white hover:text-[#00ff42]">About</a>
+                    <a href="#" class="hover:text-gray- text-white hover:text-[#00ff42]">Courses</a>
+                    <a href="#" class="hover:text-gray- text-white hover:text-[#00ff42]">Review</a>
+                    <a href="#" class="hover:text-gray- text-white hover:text-[#00ff42]">Contact</a>
+                </div>
+
+                <!-- Right: Search, Login & Mobile Toggle -->
+                <div class="flex items-center">
+                    <!-- Search Icon -->
+                    <button class="p-2 rounded-xl hover:bg-gray-700 transition text-white hidden md:block">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+
+                    </button>
+
+                    <!-- Login Button -->
+                    <a href="./auth/login.html"
+                        class="ml-4 px-4 py-2 bg-white text-[#140342] rounded hover:bg-[#140342] hover:text-white hover:border-2 hover:rounded-lg transition font-medium hidden lg:block">
+                        Login
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                        class="ml-4 md:hidden p-2 rounded hover:bg-gray-700 transition text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offcanvas Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed inset-y-0 left-0 w-64 bg-[#140342] offcanvas offcanvas-hidden z-40 overflow-scroll">
+            <div class="px-4 pt-6">
+                <button id="mobile-menu-close" class="mb-4 p-2 inline-block text-white hover:bg-gray-700 rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+
+                </button>
+                <nav class="space-y-2">
+                    <a href="./index.html"
+                        class="block px-3 py-2 text-white rounded hover:bg-white hover:text-[#140342]">Home</a>
+                    <a href="#"
+                        class="block px-3 py-2 text-white rounded hover:bg-white hover:text-[#140342]">Features</a>
+                    <a href="#" class="block px-3 py-2 text-white rounded hover:bg-white hover:text-[#140342]">About</a>
+                    <a href="#"
+                        class="block px-3 py-2 text-white rounded hover:bg-white hover:text-[#140342]">Courses</a>
+                    <a href="#"
+                        class="block px-3 py-2 text-white rounded hover:bg-white hover:text-[#140342]">Review</a>
+                    <a href="#"
+                        class="block px-3 py-2 text-white rounded hover:bg-white hover:text-[#140342]">Contact</a>
+
+                    <!-- line break -->
+                    <hr class="border-t border-gray-600 px-8 my-6" />
+                    <div class="flex flex-row gap-1 mx-auto">
+                        <a href="./auth/login.html"
+                            class="m-2 px-4 py-2 bg-white text-[#140342] rounded hover:bg-[#140342] hover:text-white hover:border-2 hover:rounded-lg transition font-medium">
+                            Login
+                        </a>
+                        <a href="./auth/sign-up.html"
+                            class="m-2 px-4 py-2 bg-white text-[#140342] rounded hover:bg-[#140342] hover:text-white hover:border-2 hover:rounded-lg transition font-medium">
+                            Sign Up
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col gap-1 text-white font-medium font-[figtree] py-4">
+                        <h2 class="text-lg text-indigo-500">Call Us</h2>
+                        <p class="text-base text-gray-300">(+234) 813 0930 230</p>
+                        <p class="text-base text-gray-300">Ibadan, Oyo State. Nigeria</p>
+                        <p class="text-base text-gray-300">hi@dmhacademy.com</p>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-36 mt-10 pb-8 bg-[url('/assets/images/hero-bg.png')] bg-no-repeat
+    bg-center
+    bg-cover
+    relative h-full w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2">
+                <h1 class="text-4xl md:text-5xl font-bold text-white font-[Figtree]">
+                    Empower Your <br>
+                    Learning
+                    Journey
+                </h1>
+                <h2 class="mt-4 text-3xl text-white font-[Figtree]">
+                    <span class="text-[#00FF24] ">Discover</span> courses designed for real-world impact
+                </h2>
+                <p class="mt-4 text-gray-200">
+                    Join thousands of learners, expand your skill set
+                    and transform
+                    your <br> career with hands-on projects and expert instructors.
+                </p>
+                <div class="mt-6 flex space-x-4 font-[marcellus]">
+                    <a href="#" class="px-6 py-3 bg-indigo-500 text-white rounded-lg hover:bg-indigo-800 transition">
+                        Get Started
+                    </a>
+                    <a href="#"
+                        class="px-6 py-3 text-white bg-[#140342] border border-[#00FF24] rounded-xl hover:bg-[#00ff24] hover:text-[#140342] transition">
+                        Learn More
+                    </a>
+                </div>
+                <!-- Wrapper: grid with responsive columns and gap -->
+                <div class="mt-0 grid grid-cols-1 sm:grid-cols-2 gap-0">
+                    <!-- Feature block ×4 -->
+                    <div class="flex items-center space-x-2 pt-4 pb-2 animate-pulse transition ease-in-out">
+                        <svg class="h-6 w-6 text-gray-100" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                        </svg>
+                        <span class="text-sm text-gray-100">
+                            More than 120 courses.
+                        </span>
+                    </div>
+
+                    <div class="flex items-center space-x-2 pt-2 pb-2 animate-pulse transition ease-in-out">
+                        <svg class="h-6 w-6 text-gray-100 " xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                        </svg>
+
+                        <span class="text-sm text-gray-100">
+                            Over 12,000 students.
+                        </span>
+                    </div>
+
+                    <div class="flex items-center space-x-2 md:pt-4 pt-2 pb-2  animate-pulse transition ease-in-out">
+                        <svg class="h-6 w-6 text-gray-100" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+                        </svg>
+
+                        <span class="text-sm text-gray-100">
+                            Learn anything online.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 md:mt-0 md:w-1/2 hidden md:block">
+                <img src="./assets/images/hero-illustration.avif" alt="Hero Illustration" class="w-full h-auto" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By The World Best -->
+    <section class="py-12 px-6 lg:px-20">
+        <!-- Trusted Logos -->
+        <div class="text-center mb-8">
+            <p class="text-xl font-[figtree] text-gray-600 mb-10">Trusted by the world's best</p>
+            <div class="flex flex-wrap justify-center items-center gap-6">
+                <!-- Replace with real logos -->
+                <img src="https://student.axia.africa/assets/logo-large-a8449874.svg" alt="Axia Africa" class="h-6" />
+                <img src="./assets/images/amazon-pay-svgrepo-com.png" alt="Amazon" class="h-6" />
+                <img src="./assets/images/amd-svgrepo-com.png" alt="AMD" class="h-6" />
+                <img src="./assets/images/cisco-svgrepo-com.png" alt="Cisco" class="h-6" />
+                <img src="./assets/images/netflix-svgrepo-com.png" alt="Netflix" class="h-6" />
+                <img src="./assets/images/brand-logitech-svgrepo-com.png" alt="Logitech" class="h-6" />
+
+            </div>
+        </div>
+    </section>
+
+    <section id="categories-carousel" class="py-12 px-6 lg:px-20">
+        <!-- Section Header -->
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-[#140342] font-[Figtree] mb-2">Top Categories</h2>
+            <p class="text-gray-500 font-[figtree]">Browse through our top courses.</p>
+        </div>
+
+        <!-- Carousel Viewport -->
+        <div class="overflow-hidden">
+            <div class="carousel-track flex transition-transform duration-500 ease-in-out">
+                <!-- Slide 1 -->
+                <div class="slide flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 rounded-lg p-6 flex flex-col items-center">
+                        <!-- icon -->
+                        <div class="bg-white p-4 rounded-full mb-4">
+                            <!-- example SVG -->
+                            <svg class="h-8 w-8 text-[#140342]" fill="#140342" version="1.1" id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 256 241" enable-background="new 0 0 256 241" xml:space="preserve"
+                                stroke="#140342">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M254,188V2H2v186h111v29H75v22h106v-22h-38v-29H254z M19,19h217v151H19L19,19z M129.227,67.814v-7.326l-7.679-1.297 c-0.567-2.51-1.557-4.862-2.891-6.977l4.514-6.345l-5.183-5.183l-6.345,4.514c-2.11-1.334-4.463-2.32-6.977-2.891l-1.292-7.675 h-7.331l-1.292,7.675c-2.515,0.572-4.867,1.557-6.977,2.891l-6.345-4.514l-5.183,5.183l4.514,6.345 c-1.334,2.115-2.324,4.467-2.891,6.977l-7.679,1.297v7.326l7.679,1.292c0.567,2.515,1.557,4.867,2.891,6.982l-4.514,6.345 l5.183,5.178l6.345-4.514c2.11,1.334,4.463,2.324,6.977,2.891l1.292,7.679h7.331l1.292-7.679c2.515-0.567,4.867-1.557,6.977-2.891 l6.345,4.514l5.183-5.178l-4.514-6.345c1.334-2.115,2.324-4.467,2.891-6.982L129.227,67.814z M99.705,75.8 c-6.429,0-11.644-5.216-11.644-11.649s5.216-11.649,11.644-11.649c6.433,0,11.649,5.216,11.649,11.649 C111.354,70.585,106.138,75.8,99.705,75.8z M180.239,109.829l8.949-5.554l-3.754-9.172l-10.275,2.313 c-1.939-2.77-4.354-5.232-7.191-7.255l2.4-10.254l-9.14-3.831l-5.629,8.899c-3.431-0.605-6.881-0.601-10.215-0.042l-5.554-8.949 l-9.172,3.754l2.313,10.275c-2.77,1.939-5.232,4.354-7.255,7.191l-10.254-2.4l-3.831,9.14l8.899,5.629 c-0.605,3.431-0.601,6.881-0.042,10.215l-8.949,5.554l3.754,9.172l10.275-2.313c1.939,2.77,4.354,5.232,7.191,7.255l-2.4,10.254 l9.14,3.831l5.629-8.899c3.431,0.605,6.881,0.601,10.215,0.042l5.554,8.948l9.172-3.754l-2.313-10.275 c2.77-1.939,5.232-4.354,7.255-7.191l10.254,2.4l3.831-9.14l-8.899-5.629C180.801,116.613,180.798,113.164,180.239,109.829z M164.892,120.9c-3.364,8.024-12.595,11.802-20.619,8.438s-11.802-12.595-8.438-20.619s12.595-11.802,20.619-8.438 S168.255,112.876,164.892,120.9z M91.746,119.725c0,2.982-2.417,5.399-5.399,5.399c-2.979,0-5.396-2.417-5.396-5.399 s2.417-5.399,5.396-5.399C89.328,114.326,91.746,116.743,91.746,119.725z M105.883,122.149v-4.848l-5.082-0.858 c-0.375-1.661-1.031-3.218-1.913-4.617l2.987-4.199l-3.43-3.43l-4.199,2.987c-1.397-0.883-2.953-1.535-4.617-1.913l-0.855-5.079 h-4.851l-0.855,5.079c-1.664,0.378-3.221,1.031-4.617,1.913l-4.199-2.987l-3.43,3.43l2.987,4.199 c-0.883,1.4-1.538,2.956-1.913,4.617l-5.082,0.858v4.848l5.082,0.855c0.375,1.664,1.031,3.221,1.913,4.62l-2.987,4.199l3.43,3.427 l4.199-2.987c1.397,0.883,2.953,1.538,4.617,1.913l0.855,5.082h4.851l0.855-5.082c1.664-0.375,3.221-1.031,4.617-1.913l4.199,2.987 l3.43-3.427l-2.987-4.199c0.883-1.4,1.538-2.956,1.913-4.62L105.883,122.149z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3 class="text-base font-semibold text-[#140342] mb-1 font-[figtree]">IT and Software</h3>
+                        <p class="text-gray-500 text-sm">6 Courses</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 rounded-lg p-6 flex flex-col items-center">
+                        <div class="bg-white p-4 rounded-full mb-4">
+                            <svg class="h-8 w-8 text-[#140342]" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20" stroke="#140342"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3 class="text-base font-semibold text-[#140342] mb-1 font-[figtree]">Development</h3>
+                        <p class="text-gray-500 text-sm">4 Courses</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 rounded-lg p-6 flex flex-col items-center">
+                        <div class="bg-white p-4 rounded-full mb-4">
+                            <svg class="h-8 w-8 text-[#140342]" viewBox="0 0 64 64" version="1.1" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                fill="#000000" stroke="#140342">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <style type="text/css">
+                                        .st0 {
+                                            fill: none;
+                                            stroke: #EDEDED;
+                                            stroke-width: 0.25;
+                                            stroke-miterlimit: 10;
+                                        }
+
+                                        .st1 {
+                                            fill: none;
+                                            stroke: #BDBDBD;
+                                            stroke-width: 0.25;
+                                            stroke-miterlimit: 10;
+                                        }
+
+                                        .st2 {
+                                            fill: none;
+                                            stroke: #000000;
+                                            stroke-width: 2;
+                                            stroke-miterlimit: 10;
+                                        }
+
+                                        .st3 {
+                                            fill: #35C6F4;
+                                        }
+
+                                        .st4 {
+                                            fill: #EA386E;
+                                        }
+
+                                        .st5 {
+                                            fill: #7065AD;
+                                        }
+
+                                        .st6 {
+                                            fill: #FDBE57;
+                                        }
+
+                                        .st7 {
+                                            fill: #7BC89C;
+                                        }
+
+                                        .st8 {
+                                            fill: #FDD304;
+                                        }
+
+                                        .st9 {
+                                            fill: #27255F;
+                                        }
+
+                                        .st10 {
+                                            fill: #00AEEF;
+                                        }
+                                    </style>
+                                    <g id="Layer_1"></g>
+                                    <g id="Layer_2">
+                                        <g>
+                                            <path
+                                                d="M12.2,43.2c2.8,0,5.1-2.3,5.1-5.1c0-2.8-2.3-5.1-5.1-5.1c-2.8,0-5.1,2.3-5.1,5.1C7.1,40.9,9.4,43.2,12.2,43.2z M12.2,35 c1.7,0,3.1,1.4,3.1,3.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1C9.1,36.4,10.5,35,12.2,35z">
+                                            </path>
+                                            <path
+                                                d="M14.3,43.9h-4.2C6.2,43.9,3,47.1,3,51v5.8h18.4V51C21.4,47.1,18.2,43.9,14.3,43.9z M19.4,54.8H5V51c0-1.4,0.6-2.7,1.5-3.6 c0.9-0.9,2.2-1.5,3.6-1.5h4.2c1.4,0,2.7,0.6,3.6,1.5c0.9,0.9,1.5,2.2,1.5,3.6V54.8z">
+                                            </path>
+                                            <path
+                                                d="M46.7,38.1c0,2.8,2.3,5.1,5.1,5.1c2.8,0,5.1-2.3,5.1-5.1c0-2.8-2.3-5.1-5.1-5.1C49,33,46.7,35.3,46.7,38.1z M51.8,35 c1.7,0,3.1,1.4,3.1,3.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1C48.7,36.4,50.1,35,51.8,35z">
+                                            </path>
+                                            <path
+                                                d="M53.9,43.9h-4.2c-3.9,0-7.1,3.2-7.1,7.1v5.8H61V51C61,47.1,57.8,43.9,53.9,43.9z M59,54.8H44.6V51c0-1.4,0.6-2.7,1.5-3.6 c0.9-0.9,2.2-1.5,3.6-1.5h4.2c1.4,0,2.7,0.6,3.6,1.5c0.9,0.9,1.5,2.2,1.5,3.6V54.8z">
+                                            </path>
+                                            <path
+                                                d="M26.9,38.1c0,2.8,2.3,5.1,5.1,5.1c2.8,0,5.1-2.3,5.1-5.1c0-2.8-2.3-5.1-5.1-5.1C29.2,33,26.9,35.3,26.9,38.1z M32,35 c1.7,0,3.1,1.4,3.1,3.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1C28.9,36.4,30.3,35,32,35z">
+                                            </path>
+                                            <path
+                                                d="M34.1,43.9h-4.2c-3.9,0-7.1,3.2-7.1,7.1v5.8h18.4V51C41.2,47.1,38,43.9,34.1,43.9z M39.2,54.8H24.8V51 c0-1.4,0.6-2.7,1.5-3.6c0.9-0.9,2.2-1.5,3.6-1.5h4.2c1.4,0,2.7,0.6,3.6,1.5c0.9,0.9,1.5,2.2,1.5,3.6V54.8z">
+                                            </path>
+                                            <path
+                                                d="M22.1,17.4c2.8,0,5.1-2.3,5.1-5.1c0-2.8-2.3-5.1-5.1-5.1c-2.8,0-5.1,2.3-5.1,5.1C17,15.1,19.3,17.4,22.1,17.4z M22.1,9.2 c1.7,0,3.1,1.4,3.1,3.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1C19,10.5,20.4,9.2,22.1,9.2z">
+                                            </path>
+                                            <path
+                                                d="M31.3,25.2c0-3.9-3.2-7.1-7.1-7.1H20c-3.9,0-7.1,3.2-7.1,7.1V31h18.4V25.2z M29.3,29H14.9v-3.8c0-1.4,0.6-2.7,1.5-3.6 c0.9-0.9,2.2-1.5,3.6-1.5h4.2c1.4,0,2.7,0.6,3.6,1.5c0.9,0.9,1.5,2.2,1.5,3.6V29z">
+                                            </path>
+                                            <path
+                                                d="M41.9,17.4c2.8,0,5.1-2.3,5.1-5.1c0-2.8-2.3-5.1-5.1-5.1c-2.8,0-5.1,2.3-5.1,5.1C36.8,15.1,39.1,17.4,41.9,17.4z M41.9,9.2c1.7,0,3.1,1.4,3.1,3.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1C38.8,10.5,40.2,9.2,41.9,9.2z">
+                                            </path>
+                                            <path
+                                                d="M51.1,25.2c0-3.9-3.2-7.1-7.1-7.1h-4.2c-3.9,0-7.1,3.2-7.1,7.1V31h18.4V25.2z M49.1,29H34.7v-3.8c0-1.4,0.6-2.7,1.5-3.6 c0.9-0.9,2.2-1.5,3.6-1.5H44c1.4,0,2.7,0.6,3.6,1.5c0.9,0.9,1.5,2.2,1.5,3.6V29z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3 class="text-base font-semibold text-[#140342] mb-1 font-[figtree]">Marketing</h3>
+                        <p class="text-gray-500 text-sm">5 Courses</p>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 rounded-lg p-6 flex flex-col items-center">
+                        <div class="bg-white p-4 rounded-full mb-4">
+                            <svg class="h-8 w-8 text-[#140342]" fill="#000000" height="200px" width="200px"
+                                version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455.002 455.002"
+                                xml:space="preserve" stroke="#140342">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M353.283,441.809l-111.11-95.309V100.323h15v2.5c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-20 c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v2.5h-17.904l-8.936-17.538l28.291-15.792c3.521-1.965,4.857-6.362,3.027-9.954 l-6.262-12.289l2.227-1.135c3.69-1.88,5.158-6.396,3.278-10.087s-6.397-5.159-10.087-3.278l-2.228,1.135l-6.262-12.289 c-1.831-3.592-6.173-5.096-9.832-3.402l-44.587,20.631C173.99,9.758,156.571,3.441,138.308,3.441 c-12.283,0-24.097,2.846-35.111,8.458c-1.772,0.903-3.113,2.473-3.728,4.365c-0.615,1.892-0.453,3.951,0.45,5.723l63.559,124.741 c1.325,2.6,3.958,4.097,6.688,4.097c1.146,0,2.309-0.263,3.399-0.819c27.664-14.095,44.143-43.396,42.158-74.065l1.503-0.839 l9.947,19.522v251.877l-111.11,95.309c-3.144,2.697-3.506,7.432-0.809,10.575c2.696,3.144,7.43,3.507,10.576,0.81l61.222-52.516 l40.121,21.33v25.494c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-25.493l40.122-21.33l61.221,52.515 c1.415,1.214,3.151,1.808,4.88,1.808c2.112,0,4.213-0.888,5.696-2.617C356.789,449.241,356.427,444.506,353.283,441.809z M200.347,72.766c3.13,23.698-7.61,46.958-27.114,60.067L116.889,22.25c6.859-2.53,14.037-3.809,21.42-3.809 c16.133,0,31.446,6.105,43.118,17.191c2.229,2.117,5.524,2.66,8.314,1.369l42.49-19.661l12.777,25.075l-40.88,22.819 C201.443,66.734,199.945,69.719,200.347,72.766z M199.279,390.191l27.895-23.928v38.758L199.279,390.191z M242.173,405.021v-38.758 l27.895,23.928L242.173,405.021z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3 class="text-base font-semibold text-[#140342] mb-1 font-[figtree]">Photography<h3>
+                                <p class="text-gray-500 text-sm">6 Courses</p>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="slide flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 rounded-lg p-6 flex flex-col items-center">
+                        <div class="bg-white p-4 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#140342]" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 10h18M3 6h18M3 14h18M3 18h18" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#140342] mb-1">Graphic Design</h3>
+                        <p class="text-gray-500 text-sm">5 Courses</p>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="slide flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 rounded-lg p-6 flex flex-col items-center">
+                        <div class="bg-white p-4 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#140342]" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 10h18M3 6h18M3 14h18M3 18h18" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#140342] mb-1">Graphic Design</h3>
+                        <p class="text-gray-500 text-sm">5 Courses</p>
+                    </div>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="slide flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 rounded-lg p-6 flex flex-col items-center">
+                        <div class="bg-white p-4 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#140342]" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 10h18M3 6h18M3 14h18M3 18h18" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#140342] mb-1">Graphic Design</h3>
+                        <p class="text-gray-500 text-sm">5 Courses</p>
+                    </div>
+                </div>
+
+                <!-- Slide 8 -->
+                <div class="slide flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 rounded-lg p-6 flex flex-col items-center">
+                        <div class="bg-white p-4 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#140342]" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 10h18M3 6h18M3 14h18M3 18h18" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#140342] mb-1">Graphic Design</h3>
+                        <p class="text-gray-500 text-sm ">5 Courses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div id="carousel-pagination" class="flex justify-center mt-6 space-x-2"></div>
+    </section>
+
+    <!-- Our Most Popular Courses -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-[#140342] font-[figtree]">
+                Our Most Popular Courses
+            </h2>
+            <p class="text-gray-500 mt-2">
+                620+ unique online course list designs
+            </p>
+        </div>
+
+        <!-- Tabs (role="tablist") -->
+        <div class="flex flex-wrap justify-center space-x-2 mb-8 gap-2" role="tablist">
+            <button
+                class="tab-btn px-4 py-2 rounded-lg bg-[#140342] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 ring-purple-600"
+                data-tab="all" role="tab" aria-selected="true">
+                All Courses
+            </button>
+            <button
+                class="tab-btn px-4 py-2 rounded-lg bg-white text-gray-700 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600"
+                data-tab="it" role="tab" aria-selected="false">
+                IT & Software
+            </button>
+            <button
+                class="tab-btn px-4 py-2 rounded-lg bg-white text-gray-700 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600"
+                data-tab="graphic" role="tab" aria-selected="false">
+                Graphic Design
+            </button>
+            <button
+                class="tab-btn px-4 py-2 rounded-lg bg-white text-gray-700 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600"
+                data-tab="marketing" role="tab" aria-selected="false">
+                Digital Marketing
+            </button>
+            <button
+                class="tab-btn px-4 py-2 rounded-lg bg-white text-gray-700 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600"
+                data-tab="web" role="tab" aria-selected="false">
+                Web Development
+            </button>
+        </div>
+
+        <!-- Courses Grid -->
+        <div id="courses" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="course-card bg-white shadow rounded-lg overflow-hidden hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                tabindex="0" data-category="graphic">
+                <img src="./assets/images/cards/card-img-1.webp" alt="Student sketching UI/UX wireframes in Figma"
+                    loading="lazy" class="w-full h-40 object-cover" />
+                <div class="p-4">
+                    <div class="flex items-center text-yellow-400 mb-2">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.09 3.36L6 12.18 1 7.64l5.41-.82L10 2l3.59 4.82L19 7.64l-5 4.54 1.09 6.18z" />
+                        </svg>
+                        <span class="ml-1 font-medium text-gray-700">4.7</span>
+                        <span class="ml-2 text-gray-500">(1.2k)</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">
+                        Front End Dev. - HTML, Tailwindcss, Js, React, API.
+                    </h3>
+                    <p class="text-gray-600 mb-2">Instructor: Adedotun Awolaja</p>
+                    <p class="text-lg font-semibold">#430,00</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="course-card bg-white shadow rounded-lg overflow-hidden relative hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                tabindex="0" data-category="marketing">
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                    SALE
+                </span>
+                <img src="./assets/images/cards/card-img-2.webp" alt="Person analyzing financial charts on a laptop"
+                    loading="lazy" class="w-full h-40 object-cover" />
+                <div class="p-4">
+                    <div class="flex items-center text-yellow-400 mb-2">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.09 3.36L6 12.18 1 7.64l5.41-.82L10 2l3.59 4.82L19 7.64l-5 4.54 1.09 6.18z" />
+                        </svg>
+                        <span class="ml-1 font-medium text-gray-700">4.9</span>
+                        <span class="ml-2 text-gray-500">(2.4k)</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">
+                        The Complete Financial Analyst Training & Investing
+                    </h3>
+                    <p class="text-gray-600 mb-2">Instructor: John Oluwafemi</p>
+                    <p class="text-lg font-semibold">
+                        <span class="line-through text-gray-400 mr-2">#250,000</span>
+                        #200,000
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="course-card bg-white shadow rounded-lg overflow-hidden hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                tabindex="0" data-category="it">
+                <img src="./assets/images/cards/card-img-3.webp" alt="Developer coding an Angular application"
+                    loading="lazy" class="w-full h-40 object-cover" />
+                <div class="p-4">
+                    <div class="flex items-center text-yellow-400 mb-2">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.09 3.36L6 12.18 1 7.64l5.41-.82L10 2l3.59 4.82L19 7.64l-5 4.54 1.09 6.18z" />
+                        </svg>
+                        <span class="ml-1 font-medium text-gray-700">4.8</span>
+                        <span class="ml-2 text-gray-500">(1.8k)</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">
+                        Angular – The Complete Guide (2023 Edition)
+                    </h3>
+                    <p class="text-gray-600 mb-2">Instructor: Robert Fox</p>
+                    <p class="text-lg font-semibold">#280,000</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="course-card bg-white shadow rounded-lg overflow-hidden relative hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                tabindex="0" data-category="graphic">
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                    SALE
+                </span>
+                <img src="./assets/images/cards/card-img-4.webp" alt="Beginner sculpting a 3D model on screen"
+                    loading="lazy" class="w-full h-40 object-cover" />
+                <div class="p-4">
+                    <div class="flex items-center text-yellow-400 mb-2">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.09 3.36L6 12.18 1 7.64l5.41-.82L10 2l3.59 4.82L19 7.64l-5 4.54 1.09 6.18z" />
+                        </svg>
+                        <span class="ml-1 font-medium text-gray-700">4.7</span>
+                        <span class="ml-2 text-gray-500">(1.5k)</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">
+                        Learn 3D Modelling And Design For Beginners
+                    </h3>
+                    <p class="text-gray-600 mb-2">Instructor: Victoria Akinwale</p>
+                    <p class="text-lg font-semibold">
+                        <span class="line-through text-gray-400 mr-2">#325,000</span>
+                        #300,000
+                    </p>
+                </div>
+            </div>
+
+            <!-- card 5 -->
+            <div class="course-card bg-white shadow rounded-lg overflow-hidden relative hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                tabindex="0" data-category="graphic">
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                    SALE
+                </span>
+                <img src="./assets/images/cards/card-img-5.webp" alt="Beginner sculpting a 3D model on screen"
+                    loading="lazy" class="w-full h-40 object-cover" />
+                <div class="p-4">
+                    <div class="flex items-center text-yellow-400 mb-2">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.09 3.36L6 12.18 1 7.64l5.41-.82L10 2l3.59 4.82L19 7.64l-5 4.54 1.09 6.18z" />
+                        </svg>
+                        <span class="ml-1 font-medium text-gray-700">4.7</span>
+                        <span class="ml-2 text-gray-500">(1.5k)</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">
+                        Marketing 2025: Complete Guide To Instagram Growth
+                    </h3>
+                    <p class="text-gray-600 mb-2">Instructor: Andrew Leonard</p>
+                    <p class="text-lg font-semibold">
+                        <span class="line-through text-gray-400 mr-2">#120,000</span>
+                        #100,000
+                    </p>
+                </div>
+            </div>
+
+            <!-- card 6 -->
+            <div class="course-card bg-white shadow rounded-lg overflow-hidden relative hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                tabindex="0" data-category="graphic">
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                    SALE
+                </span>
+                <img src="./assets/images/cards/card-img-6.webp" alt="Beginner sculpting a 3D model on screen"
+                    loading="lazy" class="w-full h-40 object-cover" />
+                <div class="p-4">
+                    <div class="flex items-center text-yellow-400 mb-2">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.09 3.36L6 12.18 1 7.64l5.41-.82L10 2l3.59 4.82L19 7.64l-5 4.54 1.09 6.18z" />
+                        </svg>
+                        <span class="ml-1 font-medium text-gray-700">4.7</span>
+                        <span class="ml-2 text-gray-500">(1.5k)</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">
+                        Education Software And PHP And Javascript
+                    </h3>
+                    <p class="text-gray-600 mb-2">Instructor: Racheal Owolabi</p>
+                    <p class="text-lg font-semibold">
+                        <span class="line-through text-gray-400 mr-2">#450,000</span>
+                        #400,000
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="course-card bg-white shadow rounded-lg overflow-hidden relative hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                tabindex="0" data-category="graphic">
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                    SALE
+                </span>
+                <img src="./assets/images/cards/card-img-7.webp" alt="Beginner sculpting a 3D model on screen"
+                    loading="lazy" class="w-full h-40 object-cover" />
+                <div class="p-4">
+                    <div class="flex items-center text-yellow-400 mb-2">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.09 3.36L6 12.18 1 7.64l5.41-.82L10 2l3.59 4.82L19 7.64l-5 4.54 1.09 6.18z" />
+                        </svg>
+                        <span class="ml-1 font-medium text-gray-700">4.7</span>
+                        <span class="ml-2 text-gray-500">(1.5k)</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">
+                        Advance PHP Knowledge with MySQL
+                    </h3>
+                    <p class="text-gray-600 mb-2">Instructor: Ebube Martins</p>
+                    <p class="text-lg font-semibold">
+                        <span class="line-through text-gray-400 mr-2">#370,000</span>
+                        #340,000
+                    </p>
+                </div>
+            </div>
+
+            <!-- card 8 -->
+            <div class="course-card bg-white shadow rounded-lg overflow-hidden relative hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                tabindex="0" data-category="graphic">
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                    SALE
+                </span>
+                <img src="./assets/images/cards/card-img-8.webp" alt="Beginner sculpting a 3D model on screen"
+                    loading="lazy" class="w-full h-40 object-cover" />
+                <div class="p-4">
+                    <div class="flex items-center text-yellow-400 mb-2">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.09 3.36L6 12.18 1 7.64l5.41-.82L10 2l3.59 4.82L19 7.64l-5 4.54 1.09 6.18z" />
+                        </svg>
+                        <span class="ml-1 font-medium text-gray-700">4.7</span>
+                        <span class="ml-2 text-gray-500">(1.5k)</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">
+                        React Native 2025 - The Complete Guide
+                    </h3>
+                    <p class="text-gray-600 mb-2">Instructor: Oluwatomiwa Gbenga</p>
+                    <p class="text-lg font-semibold">
+                        <span class="line-through text-gray-400 mr-2">#335,000</span>
+                        #320,000
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What People Say -->
+    <section class="bg-[#6440fb] py-12 px-4">
+        <h2 class="text-3xl font-bold text-[#00ff84] text-center">What People Say</h2>
+        <p class="mt-2 text-center text-white max-w-xl mx-auto">
+            Discover transformative learning journeys from real users: inspiring, insightful, and proof of our
+            platform's impact.
+        </p>
+
+        <!-- Slider container -->
+        <div class="relative overflow-hidden mt-8">
+            <!-- Track -->
+            <div id="track" class="flex transition-transform duration-300 ease-in-out">
+                <!-- Testimonial Card 1 -->
+                <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                    <div class="bg-white p-6 rounded-lg h-full flex flex-col justify-between">
+                        <svg class="h-10 w-10 top-1 right-1" fill="#140342" viewBox="0 0 32 32" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>quote</title>
+                                <path
+                                    d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z">
+                                </path>
+                            </g>
+                        </svg>
+                        <p class="text-[#140342] font-[outfit] italic">
+                            “I absolutely loved the UX Design course on this platform. It provided clear, engaging video
+                            lectures, practical templates, and interactive assignments that enhanced my skills. The
+                            instructor's feedback was timely and constructive, making complex design principles easy to
+                            understand and apply in real-world projects.”
+                        </p>
+                        <div class="flex items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ronald Richards"
+                                class="w-12 h-12 rounded-full mr-3" />
+                            <div>
+                                <p class="text-[#140342] font-semibold">Ronald Richards</p>
+                                <p class="text-gray-700 text-sm">President of Sales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 2 -->
+                <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                    <div class="bg-white p-6 rounded-lg h-full flex flex-col justify-between">
+                        <svg class="h-10 w-10 top-1 right-1" fill="#140342" viewBox="0 0 32 32" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>quote</title>
+                                <path
+                                    d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z">
+                                </path>
+                            </g>
+                        </svg>
+                        <p class="text-[#140342] font-[outfit] italic">
+                            “Enrolling in the Data Science course was a game-changer for career. The curriculum covered
+                            Python, statistics, and machine learning with hands-on datasets. Excellent interactive
+                            notebooks and real-world project assignments boosted confidence. I highly recommend this
+                            course to global individuals seeking to excel in analytics.”
+                        </p>
+                        <div class="flex items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Annette Black"
+                                class="w-12 h-12 rounded-full mr-3" />
+                            <div>
+                                <p class="text-[#140342] font-semibold">Annette Black</p>
+                                <p class="text-gray-700 text-sm">Web Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 3 -->
+                <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                    <div class="bg-white p-6 rounded-lg h-full flex flex-col justify-between">
+                        <svg class="h-10 w-10 top-1 right-1" fill="#140342" viewBox="0 0 32 32" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>quote</title>
+                                <path
+                                    d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z">
+                                </path>
+                            </g>
+                        </svg>
+                        <p class="text-[#140342] font-[outfit] italic">
+                            “- The JavaScript Programming course exceeded my expectations in every way. It blended
+                            concise core concept explanations with real-time coding challenges and an active forum for
+                            peer discussion. By completing several practical web application projects, I felt my coding
+                            skills sharpen and ready for professional.
+                            ”
+                        </p>
+                        <div class="flex items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Robert Fox"
+                                class="w-12 h-12 rounded-full mr-3" />
+                            <div>
+                                <p class="text-[#140342] font-semibold">Robert Fox</p>
+                                <p class="text-gray-700 text-sm">Marketing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 4 -->
+                <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                    <div class="bg-white p-6 rounded-lg h-full flex flex-col justify-between">
+                        <svg class="h-10 w-10 top-1 right-1" fill="#140342" viewBox="0 0 32 32" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>quote</title>
+                                <path
+                                    d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z">
+                                </path>
+                            </g>
+                        </svg>
+                        <p class="text-[#140342] font-[outfit] italic">
+                            “I found the Digital Marketing Fundamentals course insightful. From SEO strategies and
+                            social media advertising to email campaign analytics, each module offered actionable tips.
+                            The case studies were relevant, complementing hands-on exercises that built my confidence.
+                            This course transformed my approach to marketing planning.”
+                        </p>
+                        <div class="flex items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Jane Doe"
+                                class="w-12 h-12 rounded-full mr-3" />
+                            <div>
+                                <p class="text-[#140342] font-semibold">Jane Doe</p>
+                                <p class="text-gray-700 text-sm">CTO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 5 -->
+                <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                    <div class="bg-white p-6 rounded-lg h-full flex flex-col justify-between">
+                        <svg class="h-10 w-10 top-1 right-1" fill="#140342" viewBox="0 0 32 32" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>quote</title>
+                                <path
+                                    d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z">
+                                </path>
+                            </g>
+                        </svg>
+                        <p class="text-[#140342] font-[outfit] italic">
+                            “The Professional Photography course unlocked creative potential. Comprehensive modules on
+                            lighting, composition, and editing in Lightroom taught me both theory and practical
+                            techniques. Real-time photo assignments pushed my skills further. The supportive community
+                            and detailed video breakdowns made mastering complex camera settings straightforward
+                            enjoyable.”
+                        </p>
+                        <div class="flex items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="John Smith"
+                                class="w-12 h-12 rounded-full mr-3" />
+                            <div>
+                                <p class="text-[#140342] font-semibold">John Smith</p>
+                                <p class="text-gray-700 text-sm">Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 6 -->
+                <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                    <div class="bg-white p-6 rounded-lg h-full flex flex-col justify-between">
+                        <svg class="h-10 w-10 top-1 right-1" fill="#140342" viewBox="0 0 32 32" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>quote</title>
+                                <path
+                                    d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z">
+                                </path>
+                            </g>
+                        </svg>
+                        <p class="text-[#140342] font-[outfit] italic">
+                            “Completing the Finance and Accounting course boosted confidence in budgeting, forecasting,
+                            and financial statement analysis. Each lesson explained complex concepts clearly,
+                            supplemented by interactive Excel templates real-world case studies. The instructor's
+                            step-by-step guidance helped me apply new skills immediately. Excellent value for
+                            professionals.”
+                        </p>
+                        <div class="flex items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Emily Johnson"
+                                class="w-12 h-12 rounded-full mr-3" />
+                            <div>
+                                <p class="text-[#140342] font-semibold">Emily Johnson</p>
+                                <p class="text-gray-700 text-sm">Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 7 -->
+                <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                    <div class="bg-white p-6 rounded-lg h-full flex flex-col justify-between">
+                        <svg class="h-10 w-10 top-1 right-1" fill="#140342" viewBox="0 0 32 32" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>quote</title>
+                                <path
+                                    d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z">
+                                </path>
+                            </g>
+                        </svg>
+                        <p class="text-[#140342] font-[outfit] italic">
+                            “This Spanish Language course transformed my fluency in months. Well-structured grammar
+                            explanations, pronunciation drills, and live speaking sessions provided immersive learning.
+                            The interactive quizzes and conversational practice built my confidence speaking daily.
+                            Clear progress tracking and engaging cultural insights made every lesson motivating fun.”
+                        </p>
+                        <div class="flex items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Michael Brown"
+                                class="w-12 h-12 rounded-full mr-3" />
+                            <div>
+                                <p class="text-[#140342] font-semibold">Michael Brown</p>
+                                <p class="text-gray-700 text-sm">Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 8 -->
+                <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                    <div class="bg-white p-6 rounded-lg h-full flex flex-col justify-between">
+                        <svg class="h-10 w-10 top-1 right-1" fill="#140342" viewBox="0 0 32 32" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>quote</title>
+                                <path
+                                    d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z">
+                                </path>
+                            </g>
+                        </svg>
+                        <p class="text-[#140342] font-[outfit] italic">
+                            “The Yoga and Mindfulness course was an introduction to wellness. Step-by-step video
+                            tutorials guided me through poses, mindfulness techniques, and breathing exercises. The
+                            detailed anatomy explanations and personalized modifications helped prevent injuries. I feel
+                            more balanced physically and mentally thanks to this holistic program.”
+                        </p>
+                        <div class="flex items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Sarah Williams"
+                                class="w-12 h-12 rounded-full mr-3" />
+                            <div>
+                                <p class="text-[#140342] font-semibold">Sarah Williams</p>
+                                <p class="text-gray-700 text-sm">Marketer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prev/Next Buttons -->
+            <div class="flex flex-row mt-14">
+                <button id="prev"
+                    class="absolute bottom-4 right-16 ring-1 ring-white p-2 rounded-full shadow-lg disabled:opacity-50">
+                    <!-- SvgRepo: Arrow Left -->
+                    <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M7.68473 7.33186C8.07526 6.94134 8.07526 6.30817 7.68473 5.91765C7.29421 5.52712 6.66105 5.52712 6.27052 5.91765L1.60492 10.5832C0.823873 11.3643 0.823872 12.6306 1.60492 13.4117L6.27336 18.0801C6.66388 18.4706 7.29705 18.4706 7.68757 18.0801C8.0781 17.6896 8.0781 17.0564 7.68757 16.6659L4.02154 12.9998L22 12.9998C22.5523 12.9998 23 12.5521 23 11.9998C23 11.4476 22.5523 10.9998 22 10.9998L4.01675 10.9998L7.68473 7.33186Z"
+                                fill="#ffffff"></path>
+                        </g>
+                    </svg>
+                </button>
+                <button id="next"
+                    class="absolute bottom-4 right-4 ring-1 ring-white p-2 rounded-full shadow-lg disabled:opacity-50">
+                    <!-- SvgRepo: Arrow Right -->
+                    <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        fill="#ffffff">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title></title>
+                            <g id="Complete">
+                                <g id="arrow-right">
+                                    <g>
+                                        <polyline data-name="Right" fill="none" id="Right-2"
+                                            points="16.4 7 21.5 12 16.4 17" stroke="#ffffff" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"></polyline>
+                                        <line fill="none" stroke="#ffffff" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12">
+                                        </line>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Statistics -->
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+                <p class="text-3xl font-bold text-[#00ff84] font-[figtree]">30,000+</p>
+                <p class="text-white font-[figtree]">Students worldwide</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-[#00ff84] font-[figtree]">50,000+</p>
+                <p class="text-white font-[figtree]">Total course views</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-[#00ff84] font-[figtree]">18,000+</p>
+                <p class="text-white font-[figtree]">Five-star course reviews</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-[#00ff84] font-[figtree]">100,000+</p>
+                <p class="text-white font-[figtree]">Students community</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Section -->
+    <section
+        class="flex flex-col-reverse md:flex-row items-center bg-white overflow-hidden max-w-4xl w-full mx-auto py-10 px-8 justify-between">
+
+        <!-- Text Content -->
+        <div class="w-full md:w-1/2 p-6 md:p-12">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-[#1a064f]"> <span class="text-[#6440fb]">Learn</span>
+                new skills when <br>
+                and where you like.
+            </h1>
+            <p class="mt-4 text-gray-700">
+                Use the list below to bring attention to your product's key differentiator.
+            </p>
+
+            <ul class="mt-6 space-y-4">
+                <li class="flex items-center">
+                    <!-- Heroicon: Check Circle -->
+                    <svg class="h-6 w-6 text-[#6440fb] flex-shrink-0 mr-3" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293l-4 4a1 1 0
+                     01-1.414 0l-2-2 1.414-1.414L9 11.586l3.293-3.293 1.414 1.414z" clip-rule="evenodd" />
+                    </svg>
+                    Hand-Picked Authors
+                </li>
+                <li class="flex items-center">
+                    <svg class="h-6 w-6 text-[#6440fb] flex-shrink-0 mr-3" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293l-4 4a1 1 0
+                     01-1.414 0l-2-2 1.414-1.414L9 11.586l3.293-3.293 1.414 1.414z" clip-rule="evenodd" />
+                    </svg>
+                    Easy To Follow Curriculum
+                </li>
+                <li class="flex items-center">
+                    <svg class="h-6 w-6 text-[#6440fb] flex-shrink-0 mr-3" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293l-4 4a1 1 0
+                     01-1.414 0l-2-2 1.414-1.414L9 11.586l3.293-3.293 1.414 1.414z" clip-rule="evenodd" />
+                    </svg>
+                    Free Courses
+                </li>
+                <li class="flex items-center">
+                    <svg class="h-6 w-6 text-[#6440fb] flex-shrink-0 mr-3" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293l-4 4a1 1 0
+                     01-1.414 0l-2-2 1.414-1.414L9 11.586l3.293-3.293 1.414 1.414z" clip-rule="evenodd" />
+                    </svg>
+                    Money-Back Guarantee
+                </li>
+            </ul>
+
+            <button
+                class="mt-8 inline-block px-6 py-3 bg-[#140342] text-white font-medium rounded-md hover:bg-purple-700 transition">
+                Join Free
+            </button>
+        </div>
+
+        <!-- Image: hidden on mobile, shown from md+ -->
+        <div class="w-full md:w-1/2 hidden md:block">
+            <img src="./assets/images/promotional-img.png" alt="Person with curly hair in urban twilight"
+                class="object-cover w-full h-full mx-4" />
+        </div>
+
+    </section>
+
+    <!-- Why Learn with Us -->
+    <section class="bg-[#1A064F] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center">
+                Why learn with our courses?
+            </h2>
+            <p class="mt-2 text-base text-gray-300 text-center">
+                Unlock your potential with expert-led courses designed for rapid, measurable, real-world success.
+            </p>
+
+            <!-- Cards -->
+            <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+                <!-- 01. Learn -->
+                <div
+                    class="flex flex-col items-center text-center space-y-4 border-2 border-gray-800 rounded-lg py-10 px-4 gap-2">
+                    <div class="p-4 bg-white bg-opacity-10 rounded-full">
+                        <!-- Desktop Computer Icon -->
+                        <svg class="w-12 h-12 text-[#00FF84]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+                        </svg>
+
+                    </div>
+                    <h3 class="text-xl font-semibold font-[HankenGrotesk]">01. Learn</h3>
+                    <p class="text-gray-400 max-w-xs font-[figtree]">
+                        Dive into interactive lessons and hands-on projects, empowering you to master new skills
+                        confidently.
+                    </p>
+                </div>
+
+                <!-- 02. Graduate -->
+                <div
+                    class="flex flex-col items-center text-center space-y-4 border-2 border-gray-800 rounded-lg py-10 px-4 gap-2">
+                    <div class="p-4 bg-white bg-opacity-10 rounded-full">
+                        <!-- Academic Cap Icon -->
+                        <svg class="w-12 h-12 text-[#00FF84]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                        </svg>
+
+                    </div>
+                    <h3 class="text-xl font-semibold font-[hankengrotesk]">02. Graduate</h3>
+                    <p class="text-gray-400 max-w-xs font-[figtree]">
+                        Celebrate completion, showcase your expertise, and earn certified credentials propelling your
+                        career forward.
+                    </p>
+                </div>
+
+                <!-- 03. Work -->
+                <div
+                    class="flex flex-col items-center text-center space-y-4 border-2 border-gray-800 rounded-lg py-10 px-4 gap-2">
+                    <div class="p-4 bg-white bg-opacity-10 rounded-full">
+                        <!-- Briefcase Icon -->
+                        <svg class="w-12 h-12 text-[#00FF84]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                        </svg>
+
+                    </div>
+                    <h3 class="text-xl font-semibold font-[hankengrotesk]">03. Work</h3>
+                    <p class="text-gray-400 max-w-xs font-[figtree]">
+                        Apply your new skills to real challenges, innovate solutions, and accelerate career growth.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors -->
+    <section class="max-w-7xl mx-auto scroll-px-20 py-8">
+        <!-- Header with Title + Button -->
+        <div class="flex flex-col items-start md:flex-row md:justify-between md:items-center gap-4 mb-6">
+            <h2 class="text-3xl font-semibold font-[figtree] pl-4 text-[#140342]">Learn from the best instructors <br>
+                <span class="text-gray-700 text-lg font-[figtree]">Access unparalleled guidance and insights from
+                    industry-leading instructors dedicated to your success.</span>
+            </h2>
+            <button class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition-colors mx-4"><a
+                    class="font-[figtree]" href="#">View Instructors</a>
+            </button>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="relative overflow-hidden">
+            <div id="slider" class="flex transition-transform duration-500 ease-in-out mx-auto"
+                style="transform: translateX(0px);">
+                <!-- Card 1 -->
+                <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4 m-0 shadow rounded-lg p-3">
+                    <div class="bg-white rounded-lg p-0 text-gray-700 pb-4">
+                        <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&amp;w=871&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Jonas Kakaroto" class="w-30 h-auto rounded-lg mx-auto mb-4">
+                        <h3 class="text-lg font-medium text-left mb-2">Jonas Kakaroto</h3>
+                        <p class="text-left mb-4 text-sm">Digital Marketing</p>
+                        <div class="flex justify-start items-start space-x-2 text-sm mb-2">
+
+                            <!-- <div class="flex justify-start items-start text-sm text-gray-500 space-x-4"> -->
+                            <!-- Heroicon Star -->
+                            <svg class=" w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.96a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.455a1 1 0 00-.364 1.118l1.287 3.96c.3.922-.755 1.688-1.54 1.118L10 13.347l-3.37 2.455c-.785.57-1.84-.196-1.54-1.118l1.287-3.96a1 1 0 00-.364-1.118L2.643 9.387c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.96z">
+                                </path>
+                            </svg>
+                            <span class="font-[figtree] text-sm text-gray-700">4.3</span>
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                strokewidth="{1.5}" stroke="currentColor" classname="size-6">
+                                <path strokelinecap="round" strokelinejoin="round"
+                                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25">
+                                </path>
+                            </svg>
+
+                            <span class="font-[figtree] text-sm text-gray-700">754 Students</span>
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z">
+                                </path>
+                            </svg>
+
+                            <span class="font-[figtree] text-sm text-gray-700">3 Courses</span>
+                            <!-- </div> -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4 m-0 shadow rounded-lg p-3" card=""
+                    flex-shrink-0="" w-full="" md:w-1="">
+                    <div class="bg-white rounded-lg p-0 text-gray-700 pb-4">
+                        <img src="https://plus.unsplash.com/premium_photo-1690407617686-d449aa2aad3c?q=80&amp;w=870&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Victoria Kim" class="w-auto h-auto rounded-lg mx-auto mb-4">
+                        <h3 class="text-lg font-medium text-left mb-2">Victoria Kim</h3>
+                        <p class="text-left mb-4 text-sm">Social Media Management</p>
+                        <div class="flex justify-start items-start space-x-2 text-sm mb-2">
+
+                            <!-- <div class="flex justify-start items-start text-sm text-gray-500 space-x-4"> -->
+                            <!-- Heroicon Star -->
+                            <svg class=" w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.96a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.455a1 1 0 00-.364 1.118l1.287 3.96c.3.922-.755 1.688-1.54 1.118L10 13.347l-3.37 2.455c-.785.57-1.84-.196-1.54-1.118l1.287-3.96a1 1 0 00-.364-1.118L2.643 9.387c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.96z">
+                                </path>
+                            </svg>
+                            <span class="font-[figtree] text-sm text-gray-700">4.1</span>
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                strokewidth="{1.5}" stroke="currentColor" classname="size-6">
+                                <path strokelinecap="round" strokelinejoin="round"
+                                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25">
+                                </path>
+                            </svg>
+
+                            <span class="font-[figtree] text-sm text-gray-700">876 Students</span>
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z">
+                                </path>
+                            </svg>
+
+                            <span class="font-[figtree] text-sm text-gray-700">2 Courses</span>
+                            <!-- </div> -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4 m-0 shadow rounded-lg p-3">
+                    <div class="bg-white rounded-lg p-0 text-gray-700 pb-4">
+                        <img src="https://images.unsplash.com/photo-1651684215020-f7a5b6610f23?q=80&amp;w=869&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Albert Flores" class="w-auto h-auto rounded-lg mx-auto mb-4">
+                        <h3 class="text-lg font-medium text-left mb-2">Albert Flores</h3>
+                        <p class="text-left mb-4 text-sm">PHP Development</p>
+                        <div class="flex justify-start items-start space-x-2 text-sm mb-2">
+
+                            <!-- <div class="flex justify-start items-start text-sm text-gray-500 space-x-4"> -->
+                            <!-- Heroicon Star -->
+                            <svg class=" w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.96a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.455a1 1 0 00-.364 1.118l1.287 3.96c.3.922-.755 1.688-1.54 1.118L10 13.347l-3.37 2.455c-.785.57-1.84-.196-1.54-1.118l1.287-3.96a1 1 0 00-.364-1.118L2.643 9.387c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.96z">
+                                </path>
+                            </svg>
+                            <span class="font-[figtree] text-sm text-gray-700">3.9</span>
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                strokewidth="{1.5}" stroke="currentColor" classname="size-6">
+                                <path strokelinecap="round" strokelinejoin="round"
+                                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25">
+                                </path>
+                            </svg>
+
+                            <span class="font-[figtree] text-sm text-gray-700">643 Students</span>
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z">
+                                </path>
+                            </svg>
+
+                            <span class="font-[figtree] text-sm text-gray-700">5 Courses</span>
+                            <!-- </div> -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card flex-shrink-0 w-full md:w-1/2 lg:w-1/4 m-0 shadow rounded-lg p-3">
+                    <div class="bg-white rounded-lg p-0 text-gray-700 pb-4">
+                        <img src="https://plus.unsplash.com/premium_photo-1710911198710-3097c518f0e1?q=80&amp;w=870&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Albert Flores" class="w-auto h-auto rounded-lg mx-auto mb-4">
+                        <h3 class="text-lg font-medium text-left mb-2">John Mc-callister</h3>
+                        <p class="text-left mb-4 text-sm">Graphics Design</p>
+                        <div class="flex justify-start items-start space-x-2 text-sm mb-2">
+
+                            <!-- <div class="flex justify-start items-start text-sm text-gray-500 space-x-4"> -->
+                            <!-- Heroicon Star -->
+                            <svg class=" w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.96a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.455a1 1 0 00-.364 1.118l1.287 3.96c.3.922-.755 1.688-1.54 1.118L10 13.347l-3.37 2.455c-.785.57-1.84-.196-1.54-1.118l1.287-3.96a1 1 0 00-.364-1.118L2.643 9.387c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.96z">
+                                </path>
+                            </svg>
+                            <span class="font-[figtree] text-sm text-gray-700">4.5</span>
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                strokewidth="{1.5}" stroke="currentColor" classname="size-6">
+                                <path strokelinecap="round" strokelinejoin="round"
+                                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25">
+                                </path>
+                            </svg>
+
+                            <span class="font-[figtree] text-sm text-gray-700">237 Students</span>
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z">
+                                </path>
+                            </svg>
+
+                            <span class="font-[figtree] text-sm text-gray-700">4 Courses</span>
+                            <!-- </div> -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <p class="text-center items-center text-lg text-[#4f547b] mx-0 py-10 px-4
+        ">Want to help people learn,
+            grow and
+            achieve
+            more in
+            life? <a href="#" class="px-2 text-[#6440FB]">Become an instructor</a></p>
+    </section>
+
+    <!-- Resources and News -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-[#140342] font-[figtree]">Resources & News</h2>
+                    <p class="mt-2 text-gray-700 font-[figtree]">Find curated resources, expert insights, and news
+                        updates fueling your professional journey.</p>
+                </div>
+                <button class="mt-4 md:mt-0 px-5 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-700 transition">
+                    Browse Blog
+                </button>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Left Column: two big posts -->
+                <div class="space-y-8 lg:col-span-2">
+                    <!-- Post 1 -->
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1546795729-f3a5d42087f5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Man in b/w shirt with laptop"
+                            class="w-full h-60 object-cover rounded-lg transform transition-transform duration-300 ease-in-out hover:scale-105" />
+                        <span class="text-base font-semibold text-purple-800 mt-2 block font-[figtree]">BUSINESS
+                            STRATEGIES</span>
+                        <h3 class="mt-1 text-sm font-semibold text-gray-700">
+                            10 marketing trends that you should be prepared for in 2025
+                        </h3>
+                        <p class="text-gray-500 text-sm">August 30, 2025</p>
+                    </div>
+                </div>
+
+                <!-- Right Column: three small posts -->
+                <div class="space-y-6">
+                    <!-- Small Post 1 -->
+                    <div class="flex items-start space-x-4">
+                        <img src="https://images.unsplash.com/photo-1603575448878-868a20723f5d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Person wearing black and typing on a laptop"
+                            class="w-36 h-36 object-cover rounded-lg transform transition-transform duration-500 ease-in-out hover:scale-105 flex-shrink-0" />
+                        <div>
+                            <span class="text-base font-semibold text-purple-800 font-[figtree]">SOCIAL MEDIA
+                                GROWTH</span>
+                            <h4 class="mt-1 text-sm font-semibold text-gray-700">
+                                Increasing engagement with Instagram and Facebook
+                            </h4>
+                            <p class="text-gray-500 text-xs">August 21, 2025</p>
+                        </div>
+                    </div>
+
+                    <!-- Small Post 2 -->
+                    <div class="flex items-start space-x-4">
+                        <img src="https://images.unsplash.com/photo-1609270460854-e8ea8c0b591f?q=80&w=838&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Students working on laptop with notebook"
+                            class="w-36 h-36 object-cover rounded-lg transform transition-transform duration-500 ease-in-out hover:scale-105 flex-shrink-0" />
+                        <div>
+                            <span class="text-base font-semibold text-purple-800">PERSONAL DEVELOPMENT</span>
+                            <h4 class="mt-1 text-sm font-semibold text-gray-700">
+                                Engendering a culture of professional development
+                            </h4>
+                            <p class="text-gray-500 text-xs">August 28, 2025</p>
+                        </div>
+                    </div>
+
+                    <!-- Small Post 3 -->
+                    <div class="flex items-start space-x-4">
+                        <img src="https://images.unsplash.com/photo-1441015401724-70d16b783f5c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Lady holding a cup of tea"
+                            class="w-36 h-36 object-cover rounded-lg transform transition-transform duration-500 ease-in-out hover:scale-105 flex-shrink-0" />
+                        <div>
+                            <span class="text-base font-semibold text-purple-800">COLLEGE</span>
+                            <h4 class="mt-1 text-sm font-semibold text-gray-700">
+                                Education in Our Lives: We Can Change the Future
+                            </h4>
+                            <p class="text-gray-500 text-xs">August 25, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us Today -->
+    <section class="py-12 bg-[#6440FB]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mx-8">
+                <div>
+                    <h2 class="text-xl font-semibold text-white font-[figtree]">Join more than <span
+                            class="text-[#00FF84]">100,000+
+                            learners <br>
+                        </span>
+                        worldwide
+                    </h2>
+                </div>
+                <button
+                    class="mt-4 md:mt-0 px-5 py-2 bg-[#00ff84] text-[#1A064F] rounded-lg hover:bg-[#1A064F] hover:text-white transition font-[figtree] text-lg"><a
+                        href="#">Start Learning For Free</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#140342] text-white py-12 relative">
+        <div class="max-w-6xl mx-auto px-4">
+
+            <!-- Brand + Social -->
+            <div class="flex flex-col items-center md:flex-row md:justify-between mb-12 space-y-4 md:space-y-0">
+                <div class="text-2xl font-bold font-[figtree]">
+                    <a href="#">DMH Academy</a>
+                </div>
+                <div class="text-center md:text-right">
+                    <div class="text-sm font-[figtree]">Follow Us On Social Media</div>
+                    <div class="flex space-x-4 justify-center md:justify-end mt-2">
+                        <!-- Facebook -->
+                        <a href="https://web.facebook.com/awolaja.jude/" class="hover:text-[#00ff42] text-white">
+                            <svg class="h-5 w-5" fill="#ffffff" viewBox="0 0 1920.00 1920.00"
+                                xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.019200000000000002">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="m1416.013 791.915-30.91 225.617h-371.252v789.66H788.234v-789.66H449.808V791.915h338.426V585.137c0-286.871 176.207-472.329 449.09-472.329 116.87 0 189.744 6.205 231.822 11.845l-3.272 213.66-173.5.338c-4.737-.451-117.771-9.25-199.332 65.655-52.568 48.169-79.191 117.433-79.191 205.65v181.96h402.162Zm-247.276-304.018c44.446-41.401 113.71-36.889 118.787-36.663l289.467-.113 6.204-417.504-43.544-10.717C1511.675 16.02 1426.053 0 1237.324 0 901.268 0 675.425 235.206 675.425 585.137v93.97H337v451.234h338.425V1920h451.234v-789.66h356.7l61.932-451.233H1126.66v-69.152c0-54.937 14.214-96 42.078-122.058Z"
+                                        fill-rule="evenodd"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <!-- Twitter -->
+                        <a href="https://x.com/0xdefi_king" class="hover:text-white">
+                            <svg class="h-5 w-5" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"
+                                preserveAspectRatio="xMidYMid" viewBox="0 0 31.812 26" stroke="#ffffff">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M20.877,2.000 C22.519,2.000 24.382,2.652 25.426,3.738 C26.724,3.486 27.949,3.025 29.050,2.386 C28.625,3.687 27.718,4.779 26.540,5.469 C27.693,5.332 28.797,5.035 29.820,4.590 C29.054,5.707 28.087,6.690 26.971,7.477 C26.981,7.715 26.987,7.955 26.987,8.195 C26.987,15.562 21.445,24.000 10.939,24.000 C7.715,24.000 4.507,23.133 1.982,21.551 C2.428,21.605 2.883,21.631 3.343,21.631 C6.019,21.631 8.482,20.740 10.439,19.242 C7.937,19.199 5.827,17.586 5.103,15.373 C5.450,15.437 5.810,15.473 6.178,15.473 C6.696,15.473 7.203,15.406 7.681,15.277 C5.068,14.768 3.100,12.514 3.100,9.813 C3.100,9.787 3.100,9.764 3.100,9.740 C3.871,10.158 4.750,10.410 5.687,10.440 C4.154,9.437 3.147,7.734 3.147,5.799 C3.147,4.777 3.428,3.818 3.919,2.998 C6.735,6.367 10.945,8.588 15.693,8.822 C15.594,8.414 15.543,7.984 15.543,7.553 C15.543,4.473 17.721,2.000 20.877,2.000 M29.820,4.590 L29.825,4.590 M20.877,-0.000 C17.033,-0.000 14.060,2.753 13.614,6.552 C10.425,5.905 7.524,4.204 5.440,1.711 C5.061,1.257 4.503,0.998 3.919,0.998 C3.867,0.998 3.815,1.000 3.763,1.004 C3.123,1.055 2.547,1.413 2.216,1.966 C1.525,3.122 1.159,4.447 1.159,5.799 C1.159,6.700 1.321,7.579 1.625,8.400 C1.300,8.762 1.113,9.238 1.113,9.740 L1.113,9.813 C1.113,11.772 1.882,13.589 3.160,14.952 C3.087,15.294 3.103,15.655 3.215,15.998 C3.657,17.348 4.459,18.510 5.499,19.396 C4.800,19.552 4.079,19.631 3.343,19.631 C2.954,19.631 2.577,19.609 2.222,19.565 C2.141,19.556 2.061,19.551 1.981,19.551 C1.148,19.551 0.391,20.078 0.108,20.886 C-0.202,21.770 0.140,22.753 0.932,23.249 C3.764,25.023 7.318,26.000 10.939,26.000 C17.778,26.000 22.025,22.843 24.383,20.195 C27.243,16.984 28.907,12.718 28.972,8.455 C29.899,7.682 30.717,6.790 31.410,5.792 C31.661,5.458 31.810,5.041 31.810,4.590 C31.810,3.909 31.473,3.308 30.958,2.946 C31.181,2.176 30.925,1.342 30.303,0.833 C29.940,0.537 29.496,0.386 29.049,0.386 C28.708,0.386 28.365,0.474 28.056,0.654 C27.391,1.040 26.680,1.344 25.931,1.562 C24.555,0.592 22.688,-0.000 20.877,-0.000 L20.877,-0.000 Z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/a.adedotun27/" class="hover:text-white">
+                                <svg class="'h-5 w-5" viewBox="0 0 24.00 24.00" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"
+                                    stroke-width="0.00024000000000000003">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                                            fill="#ffffff"></path>
+                                        <path
+                                            d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                                            fill="#ffffff"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                                            fill="#ffffff"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                            <!-- LinkedIn -->
+                            <a href="www.linkedin.com/in/adedotun-awolaja" class="hover:text-white">
+                                <svg class="h-5 w-5" viewBox="0 0 20 20" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    fill="#ffffff">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>linkedin [#ffffff]</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs> </defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview"
+                                                transform="translate(-180.000000, -7479.000000)" fill="#ffffff">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path
+                                                        d="M144,7339 L140,7339 L140,7332.001 C140,7330.081 139.153,7329.01 137.634,7329.01 C135.981,7329.01 135,7330.126 135,7332.001 L135,7339 L131,7339 L131,7326 L135,7326 L135,7327.462 C135,7327.462 136.255,7325.26 139.083,7325.26 C141.912,7325.26 144,7326.986 144,7330.558 L144,7339 L144,7339 Z M126.442,7323.921 C125.093,7323.921 124,7322.819 124,7321.46 C124,7320.102 125.093,7319 126.442,7319 C127.79,7319 128.883,7320.102 128.883,7321.46 C128.884,7322.819 127.79,7323.921 126.442,7323.921 L126.442,7323.921 Z M124,7339 L129,7339 L129,7326 L124,7326 L124,7339 Z"
+                                                        id="linkedin-[#ffffff]"> </path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-t border-gray-600 px-8 my-6" />
+
+
+            <!-- Columns -->
+            <div class="flex flex-wrap -mx-4 mb-12">
+                <!-- About -->
+                <div class="w-1/2 md:w-1/4 px-4 mb-8">
+                    <h4 class="font-semibold mb-2 text-lg font-[figtree] uppercase">About</h4>
+                    <ul class="space-y-1 text-sm ">
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">About</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Contact</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Help Center</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Refund</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Conditions</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Categories -->
+                <div class="w-1/2 md:w-1/4 px-4 mb-8">
+                    <h4 class="font-semibold mb-2 text-lg font-[figtree] uppercase">Categories</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Design</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Development</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Marketing</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">IT & Software</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Sales Marketing</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Photography</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Personal</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Lifestyle</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">SEO</a></li>
+                    </ul>
+                </div>
+                <!-- Support -->
+                <div class="w-1/2 md:w-1/4 px-4 mb-8">
+                    <h4 class="font-semibold mb-2 text-lg font-[figtree] uppercase">Support</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Profile</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Contact</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Help Center</a></li>
+                        <li><a href="#" class="hover:text-[#00FF42] font-[hankengrotesk]">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Get in Touch -->
+                <div class="w-1/2 md:w-1/4 px-4 mb-8">
+                    <h4 class="font-semibold mb-2 text-lg font-[figtree] uppercase">Get in Touch</h4>
+                    <p class="text-xs mb-2 font-[hankengrotesk]">We don't send spam so don't worry.</p>
+                    <form class="flex flex-col space-y-2">
+                        <input type="email" placeholder="Your Email..."
+                            class="px-3 py-2 rounded bg-white text-sm font-[marcellus] focus:ring-2 focus:ring-orange-500"
+                            required />
+                        <button type="submit" class="bg-[#00ff42]  text-[#1A064F] hover:text-white hover:bg-[#1A064F] py-2 rounded 
+                     text-base font-[figtree] w-full md:w-auto transition">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="border-t border-gray-600 px-8 my-6" />
+
+
+            <!-- Bottom Links & Copyright -->
+            <div
+                class="flex flex-col items-center text-xs md:flex-col md:space-x-4 md:space-y-1 lg:flex-col lg:space-x-0 lg:space-y-1">
+                <div class="flex space-x-1 mb-2 md:mb-0">
+                    <a href="#" class="hover:text-[#00ff42] font-[figtree]">Help</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-[#00ff42] font-[figtree]">Term Conditions</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-[#00ff42] font-[figtree]">Security</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-[#00ff42] font-[figtree]">Privacy Policy</a>
+                </div>
+                <div> &copy; <a href="index.html">2025 DMH Academy</a>. All Rights Reserved.</div>
+            </div>
+        </div>
+
+        <!-- Back-to-Top -->
+        <button id="backToTop" class="hidden fixed bottom-6 right-6 bg-[#00ff42] text-[#1A064F] p-3 rounded-full 
+             shadow-lg hover:bg-[#1A064F] hover:text-white focus:outline-none" aria-label="Back to top">
+            <!-- Heroicon: Chevron Up -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+            </svg>
+        </button>
+    </footer>
+
+
+    <!-- Overlay to close mobile menu on outside click -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-30"></div>
+
+
+    <script src="./index.js"></script>
+    <script src="./slider.js"></script>
+    <script src="./instructor-carousel.js"></script>
+</body>
+
+
+</html>
