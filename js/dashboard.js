@@ -177,7 +177,7 @@ fetch('https://jsonplaceholder.typicode.com/todos?_limit=30')
             <span class="px-auto py-1 mt-3 mb-2 text-lg font-bold rounded-md font-[figtree] w-1/3 text-center ${statusColor} rounded-full">
               ${item.completed ? 'Completed' : 'Pending'}
             </span>
-             <span class="font-[marcellus] text-lg rounded-md py-2 px-1 ${textStyle}">${item.title}</span>
+             <span class="font-[marcellus] text-gray-800 dark:text-white text-lg rounded-md py-2 px-1 ${textStyle}">${item.title}</span>
           `;
             list.appendChild(li);
         });
