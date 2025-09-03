@@ -146,9 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.innerHTML = `
             <img src="${course.image}" alt="${course.title}" class="h-60 w-full object-cover p-2 rounded shadow-md">
             <div class="p-4 flex flex-col">
-              <h3 class="font-semibold font-[figtree] text-lg mb-2 uppercase text-gray-800 dark:text-white">${course.title}</h3>
-              <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Course Desc:</h3>
-              <p class="text-gray-600 dark:text-gray-600 text-sm font-[figtree]">${course.description.substring(0, 120)}...</p>
+              <h3 class="font-semibold font-[figtree] text-lg mb-2 uppercase text-gray-900 dark:text-gray-200">${course.title}</h3>
+              <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-200 font-[figtree]">Course Desc:</h3>
+              <p class="text-gray-900 dark:text-gray-200 text-sm font-[figtree]">${course.description.substring(0, 120)}...</p>
               <button class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 transition-colors duration-200 text-center mt-4">
     Enroll Now
   </button>
