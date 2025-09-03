@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${course.image}" alt="${course.title}" class="h-60 w-full object-cover p-2 rounded shadow-md">
             <div class="p-4 flex flex-col">
               <h3 class="font-semibold font-[figtree] text-lg mb-2 uppercase text-gray-800 dark:text-white">${course.title}</h3>
-              <h3 class="font-semibold mb-2 text-white">Course Desc:</h3>
+              <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Course Desc:</h3>
               <p class="text-gray-600 dark:text-white text-sm font-[figtree]">${course.description.substring(0, 120)}...</p>
               <button class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 transition-colors duration-200 text-center mt-4">
     Enroll Now
@@ -171,7 +171,7 @@ fetch('https://jsonplaceholder.typicode.com/todos?_limit=30')
             const li = document.createElement('li');
             const statusColor = item.completed ? 'bg-green-200 text-green-800 hover:bg-green-400 transition duration-500 cursor-default hover:text-black' : 'bg-yellow-200 text-yellow-800 hover:bg-yellow-400 transition duration-500 cursor-default hover:text-black';
             const textStyle = item.completed ? 'line-through text-gray-200' : 'text-white';
-            li.className = 'flex flex-col items-left p-4 bg-white rounded-lg shadow hover:shadow-lg transition bg-gray-800';
+            li.className = 'flex flex-col items-left p-4 bg-white rounded-lg shadow hover:shadow-lg transition bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-white';
             li.innerHTML = `
            
             <span class="px-auto py-1 mt-3 mb-2 text-lg font-bold rounded-md font-[figtree] w-1/3 text-center ${statusColor} rounded-full">
