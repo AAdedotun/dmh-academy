@@ -171,7 +171,7 @@ fetch('https://jsonplaceholder.typicode.com/todos?_limit=30')
             const li = document.createElement('li');
             const statusColor = item.completed ? 'bg-green-200 text-green-800 hover:bg-green-400 transition duration-500 cursor-default hover:text-black' : 'bg-yellow-200 text-yellow-800 hover:bg-yellow-400 transition duration-500 cursor-default hover:text-black';
             const textStyle = item.completed ? 'line-through text-gray-200' : 'text-white';
-            li.className = 'flex flex-col items-left p-4 bg-white rounded-lg shadow hover:shadow-lg transition bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-white';
+            li.className = 'flex flex-col items-left p-4 bg-white rounded-lg shadow hover:shadow-lg transition dark:bg-gray-800 bg-gray-200 dark:text-gray-200 text-gray-800 m-4 ';
             li.innerHTML = `
            
             <span class="px-auto py-1 mt-3 mb-2 text-lg font-bold rounded-md font-[figtree] w-1/3 text-center ${statusColor} rounded-full">
