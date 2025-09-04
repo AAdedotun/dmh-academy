@@ -20,6 +20,7 @@
     <!-- Sidebar -->
     <aside id="sidebar"
         class="fixed inset-y-0 left-0 w-64 bg-gray-200 dark:bg-gray-800 transform -translate-x-full transition-transform duration-300 z-30 flex flex-col">
+
         <!-- Header & Close -->
         <div class="flex items-center justify-between px-4 py-4 border-b border-gray-400 dark:border-gray-700">
             <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">MENU</h2>
@@ -49,6 +50,7 @@
                     <a href="dashboard.html"
                         class="flex items-center px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200"
                         aria-current="page">
+
                         <!-- Home Icon -->
                         <svg class="w-5 h-5 mr-3 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
@@ -61,6 +63,7 @@
                 <li>
                     <a href="courses.html"
                         class="flex items-center px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 active:bg-gray-100">
+
                         <!-- Academic Cap Icon -->
                         <svg class="w-5 h-5 mr-3 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
@@ -75,6 +78,7 @@
                 <li>
                     <a href="assignment.html"
                         class="flex items-center px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200">
+
                         <!-- Clipboard List Icon -->
                         <svg class="w-5 h-5 mr-3 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
@@ -90,6 +94,7 @@
                 <li>
                     <a href="profile.html"
                         class="flex items-center px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200">
+
                         <!-- User Icon -->
                         <svg class="w-5 h-5 mr-3 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
@@ -102,6 +107,7 @@
                 <li class="mt-6">
                     <button id="logout"
                         class="flex items-center w-full px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded">
+
                         <!-- Logout Icon -->
                         <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -119,9 +125,11 @@
 
     <!-- Main Content -->
     <div id="mainContent" class="flex-1 flex flex-col transition-all duration-300">
+
         <!-- Topbar -->
         <header class="fixed flex items-center justify-between px-4 py-4 bg-gray-200 dark:bg-gray-800 shadow w-full">
             <div class="flex items-center space-x-4">
+
                 <!-- Menu Toggle -->
                 <button id="openSidebar" class="text-gray-700 dark:text-gray-200 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,6 +140,7 @@
 
                 <!-- Logo -->
                 <div class="text-sm font-bold text-gray-800 dark:text-gray-200 flex items-center">
+
                     <!-- Light mode logo -->
                     <img src="../assets/images/logo-light-mode.png" alt="logo-light"
                         class="h-12 w-32 block dark:hidden" />
@@ -141,7 +150,7 @@
                 </div>
             </div>
 
-            <!-- Search / Filter -->
+
             <!-- Search / Filter -->
             <div class="flex-1 mx-4 hidden md:block">
                 <div class="relative">
@@ -158,6 +167,7 @@
             <div class="flex items-center space-x-4">
                 <button
                     class="relative text-gray-700 dark:text-gray-200 focus:outline-none rounded-full border-2 hover:border-4 border-gray-700">
+
                     <!-- Bell -->
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -169,6 +179,7 @@
 
                 <button id="profileModal"
                     class="relative text-gray-700 dark:text-gray-200 focus:outline-none border-2 border-gray-700 dark:border-gray-200 rounded-full hover:border-4">
+
                     <!-- Profile with notification dot -->
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -189,8 +200,10 @@
                 </div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
                 <!-- Repeatable Card -->
                 <div class="bg-gray-200 dark:bg-gray-800 rounded shadow overflow-hidden hover:shadow-2xl transition">
+
                     <!-- Enrolled Courses -->
                     <div class="bg-gray-200 dark:bg-gray-800 p-6 rounded-lg">
                         <h2
@@ -203,7 +216,6 @@
                 </div>
 
                 <!-- Upcoming Deadlines -->
-
                 <div class="bg-gray-200 dark:bg-gray-800 rounded shadow overflow-hidden hover:shadow-2xl transition">
                     <div class="bg-gray-200 dark:bg-gray-800 p-6 rounded-lg">
                         <h2
@@ -236,7 +248,6 @@
                         <canvas id="progressChart" class="w-full h-48"></canvas>
                     </div>
                 </div>
-                <!-- add more cards -->
             </div>
         </main>
     </div>
