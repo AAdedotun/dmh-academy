@@ -65,7 +65,7 @@ window.addEventListener('resize', initSidebar)
 
 
 
-// 4) Auth guard & logout
+// Auth guard & logout
 if (!localStorage.getItem('token')) location.href = '../auth/login.html';
 document.getElementById('logout').addEventListener('click', () => {
     localStorage.removeItem('token');
@@ -91,7 +91,7 @@ fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')
         });
     });
 
-// 7) Fetch & render Progress + animate chart
+// Fetch & render Progress + animate chart
 fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
     .then(r => r.json())
     .then(data => {
