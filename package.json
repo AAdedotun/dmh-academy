@@ -16,8 +16,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tailwindcss -i ./input.css -o ./output.css --minify",
-    "dev": "npx tailwindcss -i ./input.css -o ./output.css --minify"
+    "build": "npm tailwindcss -i ./input.css -o ./output.css --minify",
+    "dev": "npm tailwindcss -i ./input.css -o ./output.css --minify"
   },
   "dependencies": {
     "browserslist": "^4.25.3",
