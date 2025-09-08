@@ -1,14 +1,24 @@
 {
   "name": "project-2",
   "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/AAdedotun/dmh-academy#readme",
+  "bugs": {
+    "url": "https://github.com/AAdedotun/dmh-academy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AAdedotun/dmh-academy.git"
+  },
+  "license": "ISC",
+  "author": "Adedotun",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tailwindcss -i ./input.css -o ./output.css --watch",
-    "dev": "npx tailwindcss -i ./input.css -o ./output.css --watch"
+    "build": "npx tailwindcss -i ./input.css -o ./output.css --minify",
+    "dev": "npx tailwindcss -i ./input.css -o ./output.css --minify"
   },
-  "author": "Adedotun",
-  "license": "ISC",
   "dependencies": {
     "browserslist": "^4.25.3",
     "caniuse-lite": "^1.0.30001737",
@@ -23,5 +33,5 @@
     "source-map-js": "^1.2.1",
     "update-browserslist-db": "^1.1.3"
   },
-  "description": ""
+  "devDependencies": {}
 }
